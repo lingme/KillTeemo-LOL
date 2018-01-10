@@ -1,0 +1,221 @@
+﻿<!DOCTYPE html>
+
+<html id="Home_html">
+<head>
+    <link rel="bookmark" type="image/x-icon" href="../Icons/K_logo.ico" />
+    <link rel="shortcut icon" href="../Icons/K_logo.ico">
+
+    <link rel="stylesheet" type="text/css" href="~/CssStyle/hero_info_sty.css" />
+    <link rel="stylesheet" type="text/css" href="~/CssStyle/jquery.mCustomScrollbar.css" />
+    <link rel="stylesheet" type="text/css" href="~/Content/bootstrap.min.css" />
+    <link rel="stylesheet" type="text/css" href="~/CssStyle/font-awesome.min.css" />
+    <link rel="stylesheet" type="text/css" href="~/Content/bootstrap.min.css" />
+    <link rel="stylesheet" type="text/css" href="~/CssStyle/toastr.css" />
+
+    <script type="text/javascript" src="~/Scripts/jquery-1.11.3.min.js"></script>
+    <script type="text/javascript" src="~/KillTeemoJS/jquery.mCustomScrollbar.concat.min.js"></script>
+    <script type="text/javascript" src="~/Scripts/bootstrap.min.js"></script>
+    <script type="text/javascript" src="~/KillTeemoJS/toastr.js"></script>
+    <title id="status_hero_title">@ViewBag.Title</title>
+</head>
+<body>
+    <div id="bg_div_gaosi" style="background: url(../Image/hero_gs_bg/@ViewBag.Bg) no-repeat;position:absolute;left:0px;top:0px;width:100%;height:100%;background-size:cover;background-position:50% 50%;z-index:-2;"></div>
+    <div id="Home_Snow_Div" class="snow-container"></div>
+    <div id="Home_TopDiv">
+        <div id="Home_TopDiv_div1">
+            <img id="killteemo_logo" src="~/Image/killteemo_text_logo.png" onclick="LinkAll('home')" />
+        </div>
+        <div id="Home_TopDiv_div2">
+            <i id="menu_home" class="fa-home" onclick="LinkAll('home')"></i>
+            <i id="menu" class="fa-area-chart" onclick="LinkAll('Bigdata')"> 英雄趋势</i>
+            <i id="menu1" class="fa-pie-chart" onclick="LinkAll('aero')"> 大区人口</i>
+            <i id="menu2" class="fa-puzzle-piece" onclick="LinkAll('herolist')"> 英雄详情</i>
+            <i id="menu3" class="fa-cube" onclick="LinkAll('freehero')"> 周免英雄</i>
+        </div>
+        <div id="Home_TopDiv_div3">
+            <div id="SerBox" class="search bar7">
+                <div id="from_ser">
+                    <input id="dataInput" type="text" placeholder="召唤师名称" autocomplete="off"
+                           onkeyup="inputKeydown(event)" oninput="OnInputValueLength()" data-toggle="tooltip" data-placement="bottom" />
+                    <button id="but" type="button" onclick="SearchClick()"></button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div id="mid_div" class="content">
+        <div id="mid_div_soup">
+            <div class="top_dta" id="top_text">
+                <img id="top_text_img" src="~/Image/champion_trend_img/top_text.png"/>
+                <p id="top_title" style="text-align:center;width:100%;height:50px;position:absolute;top:90px; left:0px;color:#f0e6d2;text-shadow: 3px 3px 12px #000000;font-size:30px;white-space:pre;letter-spacing:20px;"></p>
+                <p id="hero_name" style="text-align:center;width:100%;height:20px;color:#f0e6d2;text-shadow: 3px 3px 12px #000000;font-size:15px;position:absolute;top:155px;left:0px;"></p>
+            </div>
+            <div style="width:100%;height:110px;position:relative;">
+                <p id="hero_birthday" style="text-align:center;width:100%;height:30px;color:#f0e6d2;text-shadow: 3px 3px 12px #000000;font-size:22px;position:absolute;top:20px;left:0px;letter-spacing:18px;font-weight:bold;white-space:pre;"></p>
+                <img class="mid_img" src="~/Image/champion_trend_img/line_mid.png">
+                <p class="mid_text_p">国 服 上 线 时 间</p>
+            </div>
+            @*<div style="width:100%;height:140px;position:relative;">
+                <p style="text-align:center;width:100%;height:30px;color:#f0e6d2;text-shadow: 3px 3px 12px #000000;font-size:20px;position:absolute;top:50px;left:0px;letter-spacing:20px;font-weight:bold;white-space:pre;"> 近战·坦克</p>
+                <img class="mid_img" src="~/Image/champion_trend_img/line_mid.png">
+                <p class="mid_text_p">英 雄 战 斗 标 签</p>
+            </div>*@
+            <div style="width:100%;height:220px;position:relative">
+                <div  class="shuxing_div"></div>
+                <div class="shuxing_div">
+                    <p id="shengcunnengli_p"  class="shuxing_p"></p>
+                    <div  class="shuxing_div_div">
+                        <div style="width:80px;height:5px;background-color:rgba(255, 255, 255, 0.23);position:absolute;top:20px;left:35px;">
+                            <div id="shengcunnengli_pro" class="progress-bar" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" style="width: 100%;background-color:#FFFFFF"></div>
+                        </div>
+                    </div>
+                    <p style="width:100%;text-align:center;font-size:12px;color:#f0e6d2;text-shadow: 5px 6px 7px #000000;position:absolute;left:0px;top:150px;">生 存 能 力</p>
+                </div>
+                <div class="shuxing_div">
+                    <p id="wuli_p" class="shuxing_p"></p>
+                    <div class="shuxing_div_div">
+                        <div style="width:80px;height:5px;background-color:rgba(255, 255, 255, 0.23);position:absolute;top:20px;left:35px;">
+                            <div id="wuli_pro" class="progress-bar" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" style="width: 100%;background-color:#FFFFFF"></div>
+                        </div>
+                    </div>
+                    <p style="width:100%;text-align:center;font-size:12px;color:#f0e6d2;text-shadow: 5px 6px 7px #000000;position:absolute;left:0px;top:150px;">物 理 攻 击</p>
+                </div>
+                <div class="shuxing_div">
+                    <p id="mofa_p" class="shuxing_p"></p>
+                    <div class="shuxing_div_div">
+                        <div style="width:80px;height:5px;background-color:rgba(255, 255, 255, 0.23);position:absolute;top:20px;left:35px;">
+                            <div id="mofa_pro" class="progress-bar" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" style="width: 100%;background-color:#FFFFFF"></div>
+                        </div>
+                    </div>
+                    <p style="width:100%;text-align:center;font-size:12px;color:#f0e6d2;text-shadow: 5px 6px 7px #000000;position:absolute;left:0px;top:150px;">魔 法 强 度</p>
+                </div>
+                <div class="shuxing_div">
+                    <p id="nandu_p" class="shuxing_p"></p>
+                    <div class="shuxing_div_div">
+                        <div style="width:80px;height:5px;background-color:rgba(255, 255, 255, 0.23);position:absolute;top:20px;left:35px;">
+                            <div id="nandu_pro" class="progress-bar" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" style="width: 100%;background-color:#FFFFFF"></div>
+                        </div>
+                    </div>
+                    <p style="width:100%;text-align:center;font-size:12px;color:#f0e6d2;text-shadow: 5px 6px 7px #000000;position:absolute;left:0px;top:150px;">上 手 难 度</p>
+                </div>
+                <div class="shuxing_div"></div>
+                <img style="width:100%;height:19px;position:absolute;left:0px;bottom:0px;" src="~/Image/champion_trend_img/no_text_mid_line.png">
+            </div>
+            <div style="width:100%;height:250px;position:relative;">
+                <div style="width:100%;height:17%"></div>
+                <div style="width:100%;height:13.2%;text-align:center;">
+                    <p class="index_p_head">1</p>
+                    <p class="index_p_head">2</p>
+                    <p class="index_p_head">3</p>
+                    <p class="index_p_head">4</p>
+                    <p class="index_p_head">5</p>
+                    <p class="index_p_head">6</p>
+                    <p class="index_p_head">7</p>
+                    <p class="index_p_head">8</p>
+                    <p class="index_p_head">9</p>
+                    <p class="index_p_head">10</p>
+                    <p class="index_p_head">11</p>
+                    <p class="index_p_head">12</p>
+                    <p class="index_p_head">13</p>
+                    <p class="index_p_head">14</p>
+                    <p class="index_p_head">15</p>
+                    <p class="index_p_head">16</p>
+                    <p class="index_p_head">17</p>
+                    <p class="index_p_head">18</p>
+                </div>
+                <div id="q_box" style="width:100%;height:13.2%;text-align:center;">
+
+                </div>
+                <div id="w_box" style="width:100%;height:13.2%;text-align:center;">
+
+                </div>
+                <div id="e_box" style="width:100%;height:13.2%;text-align:center;">
+
+                </div>
+                <div id="r_box" style="width:100%;height:13.2%;text-align:center;">
+
+                </div>
+                <div style="width:100%;height:17%;position:relative">
+                    <img  class="mid_img" src="~/Image/champion_trend_img/line_mid.png">
+                    <p  class="mid_text_p">推 荐 加 点 图</p>
+                </div>
+            </div>
+            <div class="div_details">
+                <p class="div_details_p">推&nbsp;&nbsp;荐&nbsp;&nbsp;出&nbsp;&nbsp;装</p>
+                <img class="div_details_img" src="~/Image/champion_trend_img/line_small_title.png" />
+            </div>
+            <div class="chuzhuang_div">
+                <div id="hero_status"  class="item_box_div">
+
+                </div>
+                <img class="mid_img" src="~/Image/champion_trend_img/line_mid.png">
+                <p class="mid_text_p">推 荐 前 期 装</p>
+            </div>
+            <div class="chuzhuang_div">
+                <div id="hero_Metaphase" class="item_box_div">
+
+                </div>
+                <img class="mid_img" src="~/Image/champion_trend_img/line_mid.png">
+                <p class="mid_text_p">中 期 核 心 装</p>
+            </div>
+            <div class="chuzhuang_div">
+                <div id="hero_Wind" class="item_box_div">
+
+                </div>
+                <img class="mid_img" src="~/Image/champion_trend_img/line_mid.png">
+                <p class="mid_text_p">顺 风 局 出 装</p>
+            </div>
+            <div class="chuzhuang_div">
+                <div id="hero_Bad" class="item_box_div">
+
+                </div>
+                <img class="mid_img" src="~/Image/champion_trend_img/line_mid.png">
+                <p class="mid_text_p">逆 风 局 出 装</p>
+            </div>
+
+            <div class="div_details">
+                <p class="div_details_p">排&nbsp;&nbsp;位&nbsp;&nbsp;统&nbsp;&nbsp;计</p>
+                <img class="div_details_img" src="~/Image/champion_trend_img/line_small_title.png" />
+            </div>
+
+            <div class="hexingzhuang_div">
+                <div class="hexing_item_div">
+
+                </div>
+                <img class="mid_img" src="~/Image/champion_trend_img/line_mid.png">
+                <p class="mid_text_p">核 心 装 使 用 率</p>
+            </div>
+            <div class="hexingzhuang_div">
+                <div class="hexingjineng_item_div">
+
+                </div>
+                <img class="mid_img" src="~/Image/champion_trend_img/line_mid.png">
+                <p class="mid_text_p">核 心 技 能 使 用 率</p>
+            </div>
+            <div class="hexingzhuang_div">
+                <div class="kezhi">
+
+                </div>
+                <img class="mid_img" src="~/Image/champion_trend_img/line_mid.png">
+                <p class="mid_text_p">克制以上英雄·胜率</p>
+            </div>
+            <div class="hexingzhuang_div">
+                <div class="beikezhi">
+
+                </div>
+                <img class="mid_img" src="~/Image/champion_trend_img/line_mid.png">
+                <p class="mid_text_p">被以上英雄克制·胜率</p>
+            </div>
+        </div>
+    </div>
+    <div id="low_div">
+        <i id="icon1" class="fa-question-circle" data-toggle="tooltip" data-placement="top" title="关于站点（KillTeemo FAQ）" onclick="LinkAll('faq')"></i>
+        <i id="icon2" class="fa-line-chart" data-toggle="tooltip" data-placement="top" title="行为数据监测平台" onclick="LinkAll('Info')"></i>
+        <i id="icon3" class="fa-envelope" data-toggle="tooltip" data-placement="top" title="发送邮件给开发者" onclick="LinkAll('email')"></i>
+        <i id="icon4" class="fa-qq" data-toggle="tooltip" data-placement="top" title="联系QQ" onclick="LinkAll('Tencent')"></i>
+        <i id="icon5" class="fa-paper-plane" data-toggle="tooltip" data-placement="top" title="浏览开发者博客" onclick="LinkAll('lofter')"></i>
+        <i id="icon6" class="fa-gift" data-toggle="tooltip" data-placement="top" title="捐助开发者，站点不以任何形式的渠道商业化" onclick="LinkAll('pay')"></i>
+    </div>
+    <script type="text/javascript" src="~/KillTeemoJS/Globals.js"></script>
+    <script type="text/javascript" src="~/KillTeemoJS/HeroInfo_JS.js"></script>
+</body>
+</html>

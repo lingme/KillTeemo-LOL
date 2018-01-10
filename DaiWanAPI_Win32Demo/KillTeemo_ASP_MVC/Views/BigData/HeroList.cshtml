@@ -1,0 +1,78 @@
+﻿<!DOCTYPE html>
+
+<html id="Home_html">
+<head>
+    <link rel="bookmark" type="image/x-icon" href="../Icons/K_logo.ico" />
+    <link rel="shortcut icon" href="../Icons/K_logo.ico">
+
+    <link rel="stylesheet" type="text/css" href="~/CssStyle/hero_list_sty.css" />
+    <link rel="stylesheet" type="text/css" href="~/CssStyle/jquery.mCustomScrollbar.css" />
+    <link rel="stylesheet" type="text/css" href="~/Content/bootstrap.min.css" />
+    <link rel="stylesheet" type="text/css" href="~/CssStyle/font-awesome.min.css" />
+    <link rel="stylesheet" type="text/css" href="~/Content/bootstrap.min.css" />
+    <link rel="stylesheet" type="text/css" href="~/CssStyle/toastr.css" />
+
+    <script type="text/javascript" src="~/Scripts/jquery-1.11.3.min.js"></script>
+    <script type="text/javascript" src="~/KillTeemoJS/jquery.mCustomScrollbar.concat.min.js"></script>
+    <script type="text/javascript" src="~/Scripts/bootstrap.min.js"></script>
+    <script type="text/javascript" src="~/KillTeemoJS/toastr.js"></script>
+    <title>KillTeemo - 英雄详情</title>
+</head>
+<body>
+    <div id="bg_div_gaosi"></div>
+    <div id="Home_Snow_Div" class="snow-container"></div>
+    <div id="Home_TopDiv">
+        <div id="Home_TopDiv_div1">
+            <img id="killteemo_logo" src="~/Image/killteemo_text_logo.png" onclick="LinkAll('home')" />
+        </div>
+        <div id="Home_TopDiv_div2">
+            <i id="menu_home" class="fa-home" onclick="LinkAll('home')"></i>
+            <i id="menu" class="fa-area-chart" onclick="LinkAll('Bigdata')"> 英雄趋势</i>
+            <i id="menu1" class="fa-pie-chart" onclick="LinkAll('aero')"> 大区人口</i>
+            <i id="menu2" class="fa-puzzle-piece"> 英雄详情</i>
+            <i id="menu3" class="fa-cube" onclick="LinkAll('freehero')"> 周免英雄</i>
+        </div>
+        <div id="Home_TopDiv_div3">
+            <div id="SerBox" class="search bar7">
+                <div id="from_ser">
+                    <input id="dataInput" type="text" placeholder="召唤师名称" autocomplete="off"
+                           onkeyup="inputKeydown(event)" oninput="OnInputValueLength()" data-toggle="tooltip" data-placement="bottom" />
+                    <button id="but" type="button" onclick="SearchClick()"></button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <img id="indicator" src="~/Image/indicator.png" />
+    <div id="mid_div" class="content">
+        <div id="mid_div_soup">
+            <div class="top_dta" id="top_text">
+                <img id="top_text_img" src="~/Image/champion_trend_img/top_text.png" />
+                <p id="top_title">英&nbsp;&nbsp;&nbsp;雄&nbsp;&nbsp;&nbsp;详&nbsp;&nbsp;&nbsp;情</p>
+            </div>
+            <div style="width:100%">
+                <div class="tag" style="width:100%;height:90px;text-align:center;">
+                    <img class="anti_box" data-toggle="tooltip" data-placement="top" title="所 有" src="~/Image/hero_tag/suoyou.png" onclick="get_ajax('all')"/>
+                    <img class="anti_box" data-toggle="tooltip" data-placement="top" title="战 士" src="~/Image/hero_tag/zhanshi.png" onclick="get_ajax('zhanshi')"/>
+                    <img class="anti_box" data-toggle="tooltip" data-placement="top" title="坦 克" src="~/Image/hero_tag/tanke.png" onclick="get_ajax('tanke')"/>
+                    <img class="anti_box" data-toggle="tooltip" data-placement="top" title="法 师" src="~/Image/hero_tag/fashi.png" onclick="get_ajax('fashi')"/>
+                    <img class="anti_box" data-toggle="tooltip" data-placement="top" title="刺 客" src="~/Image/hero_tag/cike.png" onclick="get_ajax('cike')"/>
+                    <img class="anti_box" data-toggle="tooltip" data-placement="top" title="辅 助" src="~/Image/hero_tag/fuzhu.png" onclick="get_ajax('fuzhu')"/>
+                    <img class="anti_box" data-toggle="tooltip" data-placement="top" title="射 手" src="~/Image/hero_tag/sheshou.png" onclick="get_ajax('sheshou')"/>
+                </div>
+            </div>
+            <div id="table_hero" style="text-align:center">
+            </div>
+        </div>
+    </div>
+    <div id="low_div">
+        <i id="icon1" class="fa-question-circle" data-toggle="tooltip" data-placement="top" title="关于站点（KillTeemo FAQ）" onclick="LinkAll('faq')"></i>
+        <i id="icon2" class="fa-line-chart" data-toggle="tooltip" data-placement="top" title="行为数据监测平台" onclick="LinkAll('Info')"></i>
+        <i id="icon3" class="fa-envelope" data-toggle="tooltip" data-placement="top" title="发送邮件给开发者" onclick="LinkAll('email')"></i>
+        <i id="icon4" class="fa-qq" data-toggle="tooltip" data-placement="top" title="联系QQ" onclick="LinkAll('Tencent')"></i>
+        <i id="icon5" class="fa-paper-plane" data-toggle="tooltip" data-placement="top" title="浏览开发者博客" onclick="LinkAll('lofter')"></i>
+        <i id="icon6" class="fa-gift" data-toggle="tooltip" data-placement="top" title="捐助开发者，站点不以任何形式的渠道商业化" onclick="LinkAll('pay')"></i>
+    </div>
+    <script type="text/javascript" src="~/KillTeemoJS/Globals.js"></script>
+    <script type="text/javascript" src="~/KillTeemoJS/HeroListJS.js"></script>
+</body>
+</html>

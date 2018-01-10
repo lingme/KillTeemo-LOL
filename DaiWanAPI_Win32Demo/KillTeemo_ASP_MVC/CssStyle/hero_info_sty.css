@@ -1,0 +1,376 @@
+﻿@font-face{
+    font-family:FontAwesome;
+    src:url(../KillTeemoFonts/fontawesome-webfont.woff);
+}
+
+*{
+    font-family:FontAwesome,'Microsoft YaHei';
+    font-style:normal;
+}
+
+html {
+    width:100%;
+    height:100%;
+    overflow-x:hidden;
+    overflow-y:hidden;
+}
+
+body {
+    margin-top:0px;
+    margin-left:0px;
+    width:100%;
+    height:100%;
+    background: #000000;
+    background-size:cover;
+}
+
+#Home_Snow_Div{
+    width:100%;
+    height:100%;
+    z-index:-1;
+}
+
+.snow-container{ 
+    position: fixed; 
+    opacity: 0.3;
+    top: 0; 
+    left: 0; 
+    width: 100%; 
+    height: 100%; 
+    pointer-events: none; 
+    background-repeat:no-repeat;
+    z-index: 100001; 
+}
+
+#Home_TopDiv{
+    width: 100%;
+    min-width:940px;
+    height:55px;
+    background-repeat:no-repeat;
+    background-position:50% 50%;
+    background-image:url(../Image/TopBG_small.png);
+}
+
+#Home_TopDiv_div1{
+    float:left;
+    width:160px;
+    height:55px;
+}
+
+#Home_TopDiv_div2{
+    float:left;
+    width:640px;
+    height:55px;
+}
+
+#Home_TopDiv_div3{
+    float:left;
+    width: calc(100% - 800px);
+    height:55px;
+    text-align:right;
+}
+
+#killteemo_logo{
+    margin-left:25px;
+    margin-top:17px;
+    cursor:pointer;
+    width:118px;
+    height:22px;
+}
+
+#menu,#menu1,#menu2,#menu3,#menu_home{
+    float:left;
+    margin-top:21px;
+    margin-left:45px;
+    color:#f0e6d2;
+    font-size:14px;
+    cursor:pointer;
+    text-shadow: 3px 3px 12px #000000;
+}
+
+#menu_home{
+    margin-left:25px;
+    margin-top:12px;
+    font-size:25px;
+}
+
+#indicator{
+    position:absolute;
+    left:246px;
+    top:42px;
+}
+
+#SerBox{
+    position :relative;
+    margin-top:8px;
+}
+
+#from_ser {
+	height:24px;
+}
+
+.bar7 input {
+	width:140px;
+	border-radius:24px;
+	border:0px solid  #FFFFFF;
+	background:rgba(255,255,255,0.1);
+	transition:.3s linear;
+	float:right;
+    color:#f0e6d2;
+    opacity:1;
+    text-decoration:none;
+    font-size:12px;
+}
+
+.bar7 input:focus {
+    width:200px;
+}
+
+input::-ms-clear{display:none;}
+
+.bar7 button {
+    background:rgba(255,255,255,0);
+    background-image:url(../Icons/search.png);
+    background-repeat:no-repeat;
+    background-position:center;
+    background-size:16px 16px;
+    right:0px;
+    width:24px;
+    border-radius:24px;
+}
+
+div.search {
+	padding:10px 0;
+}
+#from_ser {
+	position:absolute;
+	width:140px;
+	right:15px;
+}
+input,button {
+	border:none;
+	outline:none;
+}
+input {
+	width:100%;
+	height:24px;
+	padding-left:13px;
+}
+button {
+	height:24px;
+	width:24px;
+	cursor:pointer;
+	position:absolute;
+}
+
+#mid_div{
+    width:100%;
+    height: calc(100% - 95px);
+    text-align:center;
+    overflow:auto;
+    -webkit-overflow-scrolling:touch;
+}
+
+#low_div{
+    width:100%;
+    height:40px;
+}
+
+ #icon1,#icon2,#icon3,#icon4,#icon5,#icon6{
+    float: left;
+    margin-top: 6px;
+    margin-left: 30px;
+    cursor:pointer;
+    color: #f0e6d2;
+    font-size: 19px;
+}
+
+
+ #mid_div_soup{
+     width:900px;
+     min-width:900px;
+     margin:0px auto;
+     -webkit-overflow-scrolling:touch;
+ }
+
+ /*===================================================Group=====================================================*/
+
+ .top_dta{
+     height:160px;
+     width:100%;
+ }
+
+ #top_text{
+     height:250px;
+     position:relative;
+ }
+
+ #top_text_img{
+     position:absolute;
+     top:190px;
+     left:40px;
+ }
+
+.index_p_head{
+     margin-left:5px;
+     margin-right:5px;
+     display: inline-block;
+     width:20px;
+     height:20px;
+     color:#f0e6d2;
+     text-shadow: 5px 6px 7px rgba(0,0,0,0.6);
+     white-space:pre;
+ }
+
+ .index_p{
+     margin-left:6.8px;
+     margin-right:6.8px;
+     display: inline-block;
+     width:20px;
+     height:20px;
+     color:#f0e6d2;
+     background-color:rgba(255, 255, 255, 0.1);
+     text-shadow: 5px 6px 7px rgba(0,0,0,0.6);
+     white-space:pre;
+ }
+
+.item_box_div{
+    width:100%;
+    height:80px;
+    position:absolute;
+    left:0px;
+    top:42px;
+}
+
+ .item_box{
+     width:50px;
+     height:50px;
+     display:inline-block;
+     border:1px solid rgba(255, 255, 255, 0.23);
+     margin-left:20px;
+     margin-right:20px;
+     padding:3px;
+ }
+
+ .chuzhuang_div{
+     width:100%;
+     height:150px;
+     position:relative;
+ }
+
+ .shuxing_div{
+     width:16.6%;
+     height:100%;
+     float:left;
+     position:relative
+ }
+
+ .shuxing_p{
+     width:100%;
+     text-align:center;
+     font-size:40px;
+     color:#f0e6d2;
+     text-shadow: 5px 6px 7px rgba(0,0,0,0.6);
+     position:absolute;
+     left:0px;
+     top:50px;
+ }
+
+ .shuxing_div_div{
+     width:100%;
+     height:40px;
+     text-align:center;
+     position:absolute;
+     left:0px;
+     top:100px;
+ }
+
+ .hexingzhuang_div{
+     width:100%;
+     height:170px;
+     position:relative;
+ }
+
+ .hexing_item_div.hexingjineng_item_div.kezhi.beikezhi{
+    width:100%;
+    height:105px;
+    position:absolute;
+    left:0px;
+    top:30px;
+ }
+
+ .hexing_item_img_div{
+     width:15%;
+     height:100%;
+     position:relative;
+     display:inline-block;
+ }
+
+ .hexing_item_img{
+     width:50px;
+     height:50px;
+     position:absolute;
+     left:42.5px;
+     top:25px;
+     border:1px solid rgba(255, 255, 255, 0.23);
+     padding:3px;
+ }
+
+
+ .hexing_item_p{
+     width:100%;
+     height:30px;
+     left:0px;
+     color:#f0e6d2;
+     text-align:center;
+     font-size:14px;
+     text-shadow: 5px 6px 7px #000000;
+     position:absolute;
+     top:90px;
+ }
+
+ .mid_img{
+     width:100%;
+     height:19px;
+     position:absolute;
+     bottom:0px;
+     left:0px;
+ }
+
+ .mid_text_p{
+     position:absolute;
+     width:100%;
+     height:12px;
+     bottom:-5px;
+     left:0px;
+     color:#f0e6d2;
+     text-align:center;
+     font-size:10px;text-shadow: 5px 6px 7px #000000;
+ }
+
+
+ .div_details{
+     position:relative;
+     width:100%;
+     height:180px;
+ }
+
+
+.div_details_p{
+    position:absolute;
+    top:74px;
+    text-align:center;
+    width:900px;
+    height:50px;
+    color:#f0e6d2;
+    text-shadow: 4px 2px 8px #000000;
+    font-size:20px;
+}
+
+.div_details_img{
+    width:388px;
+    height:24px;
+    position:absolute;
+    left:256px;
+    bottom:40px;
+}

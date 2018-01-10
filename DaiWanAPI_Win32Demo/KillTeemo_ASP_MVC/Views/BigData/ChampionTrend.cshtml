@@ -1,0 +1,138 @@
+﻿<!DOCTYPE html>
+
+<html id="Home_html">
+<head>
+    <link rel="bookmark" type="image/x-icon" href="../Icons/K_logo.ico" />
+    <link rel="shortcut icon" href="../Icons/K_logo.ico">
+
+    <link rel="stylesheet" type="text/css" href="~/CssStyle/champion_trend_sty.css" />
+    <link rel="stylesheet" type="text/css" href="~/CssStyle/jquery.mCustomScrollbar.css" />
+    <link rel="stylesheet" type="text/css" href="~/Content/bootstrap.min.css" />
+    <link rel="stylesheet" type="text/css" href="~/CssStyle/font-awesome.min.css" />
+    <link rel="stylesheet" type="text/css" href="~/Content/bootstrap.min.css" />
+    <link rel="stylesheet" type="text/css" href="~/CssStyle/toastr.css" />
+
+    <script type="text/javascript" src="~/Scripts/jquery-1.11.3.min.js"></script>
+    <script type="text/javascript" src="~/KillTeemoJS/jquery.mCustomScrollbar.concat.min.js"></script>
+    <script type="text/javascript" src="~/Scripts/bootstrap.min.js"></script>
+    <script type="text/javascript" src="~/KillTeemoJS/toastr.js"></script>
+    <title>KillTeemo - 英雄趋势</title>
+</head>
+<body>
+    <div id="bg_div_gaosi" ></div>
+    <div id="Home_Snow_Div" class="snow-container"></div>
+    <div id="Home_TopDiv">
+        <div id="Home_TopDiv_div1">
+            <img id="killteemo_logo" src="~/Image/killteemo_text_logo.png" onclick="LinkAll('home')"/>
+        </div>
+        <div id="Home_TopDiv_div2">
+            <i id="menu_home" class="fa-home" onclick="LinkAll('home')"></i>
+            <i id="menu" class="fa-area-chart"> 英雄趋势</i>
+            <i id="menu1" class="fa-pie-chart" onclick="LinkAll('aero')"> 大区人口</i>
+            <i id="menu2" class="fa-puzzle-piece" onclick="LinkAll('herolist')"> 英雄详情</i>
+            <i id="menu3" class="fa-cube" onclick="LinkAll('freehero')"> 周免英雄</i>
+        </div>
+        <div id="Home_TopDiv_div3">
+            <div id="SerBox" class="search bar7">
+                <div id="from_ser">
+                    <input id="dataInput" type="text" placeholder="召唤师名称" autocomplete="off"
+                           onkeyup="inputKeydown(event)" oninput="OnInputValueLength()" data-toggle="tooltip" data-placement="bottom" />
+                    <button id="but" type="button" onclick="SearchClick()"></button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <img id="indicator" src="~/Image/indicator.png" />
+    <div id="mid_div" class="content">
+        <div id="mid_div_soup">
+           <div class="top_dta" id="top_text">
+               <img id="top_text_img" src="~/Image/champion_trend_img/top_text.png" />
+               <p id="top_title">英&nbsp;&nbsp;&nbsp;雄&nbsp;&nbsp;&nbsp;趋&nbsp;&nbsp;&nbsp;势</p>
+           </div>
+           <div class="top_dta">
+               <div class="win_row" style="width:100%;height:141px;">
+               </div>
+               <div class="low_line">
+                   <img class="mid_row_img" src="~/Image/champion_trend_img/line_mid.png" />
+                   <p class="win_out_ban">最 高 胜 率</p>
+               </div>
+           </div>
+           <div class="top_dta">
+               <div class="out_row" style="width:100%;height:141px;">
+               </div>
+               <div class="low_line">
+                   <img class="mid_row_img" src="~/Image/champion_trend_img/line_mid.png" />
+                   <p class="win_out_ban">最 高 出 场</p>
+               </div>
+           </div>
+           <div class="top_dta">
+               <div class="ban_row" style="width:100%;height:141px;">
+               </div>
+               <div class="low_line">
+                   <img class="mid_row_img" src="~/Image/champion_trend_img/line_mid.png" />
+                   <p class="win_out_ban">最 高 BAN</p>
+               </div>
+           </div>
+           <div id="div_details">
+               <p id="div_details_p">详&nbsp;&nbsp;细&nbsp;&nbsp;数&nbsp;&nbsp;据</p>
+               <p data-toggle="tooltip" data-placement="bottom" title="新英雄上线一个月后统计大数据" style="color:#f0e6d2;font-size:25px;text-align:center;position:absolute;left:0px;top:180px;width:900px;cursor:pointer">◆</p>
+               <img id="div_details_img" src="~/Image/champion_trend_img/line_small_title.png" />
+               <img id="div_details_img_anti" src="~/Image/champion_trend_img/line_small_title_anti.png" />
+               <p id="tier_p">段&nbsp;位&nbsp;选&nbsp;择</p>
+               <p id="queue_p">定&nbsp;位&nbsp;选&nbsp;择</p>
+               <select id="tier_select" onchange="select_chang()">
+                   <option value="255" selected="selected">全&nbsp;部</option>
+                   <option value="0">王&nbsp;者</option>
+                   <option value="6">大&nbsp;师</option>
+                   <option value="1">钻&nbsp;石</option>
+                   <option value="2">铂&nbsp;金</option>
+                   <option value="3">黄&nbsp;金</option>
+                   <option value="4">白&nbsp;银</option>
+                   <option value="5">青&nbsp;铜</option>
+               </select>
+               <select id="queue_select" onchange="select_chang()">
+                   <option value="0" selected="selected">全&nbsp;部</option>
+                   <option value="1">上&nbsp;单</option>
+                   <option value="2">中&nbsp;单</option>
+                   <option value="3">辅&nbsp;助</option>
+                   <option value="4">A&nbsp;&nbsp;D</option>
+                   <option value="5">打&nbsp;野</option>
+               </select>
+           </div>
+           <div style="width:100%;height:65px;position:relative">
+               <img src="~/Image/champion_trend_img/win.png" style="height:19px;left:0px;position:absolute;top:0px;" />
+               <div style="width:100%;height:30px;left:0px;top:23px;position:relative">
+                   <div style="float:left;width:24.5%;height:30px">
+                       <p style="color:#f0e6d2;font-size:14px;text-align:left">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;排&nbsp;名</p>
+                   </div>
+                   <div style="float:left;width:15.5%;height:30px">
+                       <p style="color:#f0e6d2;font-size:14px;text-align:left">英&nbsp;雄</p>
+                   </div>
+                   <div style="float:left;width:20%;height:30px">
+                       <p style="color:#f0e6d2;font-size:14px;text-align:center;cursor:pointer;" onclick="order_click('Win')">胜&nbsp;率&nbsp;∨</p>
+                   </div>
+                   <div style="float:left;width:20%;height:30px">
+                       <p style="color:#f0e6d2;font-size:14px;text-align:center;cursor:pointer;" onclick="order_click('Appearance')">出&nbsp;场&nbsp;率&nbsp;∨</p>
+                   </div>
+                   <div style="float:left;width:20%;height:30px">
+                       <p style="color:#f0e6d2;font-size:14px;text-align:center;cursor:pointer;"onclick="order_click('Ban')">Ban&nbsp;率&nbsp;∨</p>
+                   </div>
+               </div>
+               <img src="~/Image/champion_trend_img/win.png" style="height:19px;left:0px;position:absolute;top:45px;" />
+           </div>
+           <div id="table_hero">
+           </div>
+        </div>
+    </div>
+    <div id="low_div">
+        <i id="icon1" class="fa-question-circle" data-toggle="tooltip" data-placement="top" title="关于站点（KillTeemo FAQ）" onclick="LinkAll('faq')"></i>
+        <i id="icon2" class="fa-line-chart" data-toggle="tooltip" data-placement="top" title="行为数据监测平台" onclick="LinkAll('Info')"></i>
+        <i id="icon3" class="fa-envelope" data-toggle="tooltip" data-placement="top" title="发送邮件给开发者" onclick="LinkAll('email')"></i>
+        <i id="icon4" class="fa-qq" data-toggle="tooltip" data-placement="top" title="联系QQ" onclick="LinkAll('Tencent')"></i>
+        <i id="icon5" class="fa-paper-plane" data-toggle="tooltip" data-placement="top" title="浏览开发者博客" onclick="LinkAll('lofter')"></i>
+        <i id="icon6" class="fa-gift" data-toggle="tooltip" data-placement="top" title="捐助开发者，站点不以任何形式的渠道商业化" onclick="LinkAll('pay')"></i>
+    </div>
+    <script type="text/javascript" src="~/KillTeemoJS/Globals.js"></script>
+    <script type="text/javascript" src="~/KillTeemoJS/ChampionTrend_JS.js"></script>
+</body>
+</html>

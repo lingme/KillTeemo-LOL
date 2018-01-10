@@ -1,0 +1,263 @@
+﻿@font-face{
+    font-family:FontAwesome;
+    src:url(../KillTeemoFonts/fontawesome-webfont.woff);
+}
+
+*{
+    font-family:FontAwesome,'Microsoft YaHei';
+    font-style:normal;
+}
+
+#Home_html {
+    width:100%;
+    height:100%;
+    overflow-x:hidden;
+    overflow-y:hidden;
+}
+
+#Home_body{
+    margin-top:0px;
+    margin-left:0px;
+    width:100%;
+    height:100%;
+    background: #000000;
+    background-size:cover;
+}
+
+#bg_div{
+    background: url(../Image/Kayi.jpg) no-repeat;
+}
+
+#bg_div_gaosi{
+    background: url(../Image/Kayi_gaosi.jpg) no-repeat;
+}
+
+#bg_div_gaosi,#bg_div{
+    position:absolute;
+    left:0px;
+    top:0px;
+    width:100%;
+    height:100%;
+    background-size:cover;
+    background-position:50% 50%;
+    z-index:-2;
+}
+
+#Home_Snow_Div{
+    width:100%;
+    height:100%;
+    z-index:-1;
+}
+
+.snow-container{ 
+    position: fixed; 
+    opacity: 0.6;
+    top: 0; 
+    left: 0; 
+    width: 100%; 
+    height: 100%; 
+    pointer-events: none; 
+    background-repeat:no-repeat;
+    z-index: 100001; 
+}
+
+
+#Home_TopDiv{
+    width: 100%;
+    height:147px;
+    min-width:840px;
+    background-repeat:no-repeat;
+    background-position:50% 50%;
+    background-image:url(../Image/TopBG.png);
+}
+
+#Home_TopDiv_div1{
+    float:left;
+    width:160px;
+    height:55px;
+}
+
+#Home_TopDiv_div2{
+    float:left;
+    width:640px;
+    height:55px;
+}
+
+#Home_TopDiv_div3{
+    float:left;
+    width: calc(100% - 800px);
+    height:55px;
+    text-align:right;
+}
+
+#killteemo_logo{
+    margin-left:25px;
+    margin-top:17px;
+    cursor:pointer;
+    width:118px;
+    height:22px;
+}
+
+#menu,#menu1,#menu2,#menu3,#menu_home{
+    float:left;
+    margin-top:21px;
+    margin-left:45px;
+    color:#f0e6d2;
+    font-size:14px;
+    cursor:pointer;
+    text-shadow: 3px 3px 12px #000000;
+}
+
+#menu_home{
+    margin-left:25px;
+    margin-top:12px;
+    font-size:25px;
+}
+
+#indicator{
+    position:absolute;
+    left:151px;
+    top:42px;
+}
+
+#Hero_t{
+    color:#f0e6d2;
+    font-size:14px;
+    position:absolute;
+    top:21px;
+    left:180px;
+    cursor:pointer;
+}
+
+#icon1, #icon2, #icon3, #icon4, #icon5, #icon6 {
+    float: left;
+    margin-top: 6px;
+    margin-left: 30px;
+    cursor:pointer;
+    color: #f0e6d2;
+    font-size: 19px;
+    opacity: 0.9;
+}
+
+#Home_Low_div,#Home_Low_div1{
+    margin-left:0px;
+    width:300px;
+    height:40px;
+    position:absolute;
+    bottom:0px;
+}
+
+#Home_Low_div1{
+    width:100%;
+    text-align:center;
+    height:28px;
+}
+
+#icp_a{
+    width:140px;
+    color:#FFFFFF;
+    font-size:12px;
+    opacity:0.4;
+    cursor:pointer;
+    background-color:rgba(0,0,0,0);
+    text-align:center;
+    margin:0px auto;
+}
+
+
+#Home_mid_div,#Home_mid_div_copy{
+    position:absolute;
+    top:89.5px;
+    bottom:40px;
+    width:100%;
+}
+
+#Home_mid_div_copy{
+    text-align:center;
+}
+
+#Ser{
+    width: 100%;
+    height: 30%;
+    margin: auto;  
+    position: absolute;  
+    top:30%;
+}
+
+#SerChile1,#SerChile2,#SerChile3{
+    width:100%;
+}
+
+#SerChile1{
+    height:45%;
+    text-align:center;
+    margin: 0 auto;
+}
+
+#SerChile3{
+    height:55%;
+    margin: 0 auto;
+}
+
+#SerBox{
+    position :relative;
+}
+
+#from_ser {
+	height:38px;
+}
+
+.bar7 input:focus {
+}
+
+.bar7 input {
+	width:300px;
+	border-radius:38px;
+	border:1px solid rgba(255,255,255,0.3);
+	background:rgba(0,0,0,0.3);
+	transition:.3s linear;
+	float:right;
+    color:#f0e6d2;
+    text-decoration:none;
+}
+
+.bar7 button {
+	background:rgba(0,0,0,0);
+    background-image:url(../Icons/search.png);
+    background-repeat:no-repeat;
+    background-position:center;
+    right:0px;
+    width:38px;
+    border-radius:38px;
+}
+
+input::-ms-clear{display:none;}
+
+div.search {
+	padding:10px 0;
+}
+#from_ser {
+	position:relative;
+	width:300px;
+	margin:0 auto;
+}
+input,button {
+	border:none;
+	outline:none;
+}
+input {
+	width:100%;
+	height:38px;
+	padding-left:13px;
+}
+button {
+	height:38px;
+	width:45px;
+	cursor:pointer;
+	position:absolute;
+}
+
+#mid_kill_logo{
+    opacity:0.01;
+}
+

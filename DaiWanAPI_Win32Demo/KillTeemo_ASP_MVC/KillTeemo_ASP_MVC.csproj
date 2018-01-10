@@ -1,0 +1,699 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="14.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.1.0.0\build\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props" Condition="Exists('..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.1.0.0\build\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props')" />
+  <Import Project="..\packages\Microsoft.Net.Compilers.1.0.0\build\Microsoft.Net.Compilers.props" Condition="Exists('..\packages\Microsoft.Net.Compilers.1.0.0\build\Microsoft.Net.Compilers.props')" />
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>
+    </ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{14618262-942A-4882-9F4D-7B03ACF675DF}</ProjectGuid>
+    <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>KillTeemo_ASP_MVC</RootNamespace>
+    <AssemblyName>KillTeemo_ASP_MVC</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <MvcBuildViews>false</MvcBuildViews>
+    <UseIISExpress>true</UseIISExpress>
+    <IISExpressSSLPort />
+    <IISExpressAnonymousAuthentication />
+    <IISExpressWindowsAuthentication />
+    <IISExpressUseClassicPipelineMode />
+    <UseGlobalApplicationHostFile />
+    <NuGetPackageImportStamp>
+    </NuGetPackageImportStamp>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="EntityFramework, Version=5.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>obj\Release\AspnetCompileMerge\Source\bin\EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.AI.Agent.Intercept, Version=2.0.6.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ApplicationInsights.Agent.Intercept.2.0.6\lib\net45\Microsoft.AI.Agent.Intercept.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.AI.DependencyCollector, Version=2.2.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ApplicationInsights.DependencyCollector.2.2.0\lib\net45\Microsoft.AI.DependencyCollector.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.AI.PerfCounterCollector, Version=2.2.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ApplicationInsights.PerfCounterCollector.2.2.0\lib\net45\Microsoft.AI.PerfCounterCollector.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.AI.ServerTelemetryChannel, Version=2.2.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ApplicationInsights.WindowsServer.TelemetryChannel.2.2.0\lib\net45\Microsoft.AI.ServerTelemetryChannel.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.AI.Web, Version=2.2.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ApplicationInsights.Web.2.2.0\lib\net45\Microsoft.AI.Web.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.AI.WindowsServer, Version=2.2.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ApplicationInsights.WindowsServer.2.2.0\lib\net45\Microsoft.AI.WindowsServer.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.ApplicationInsights, Version=2.2.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ApplicationInsights.2.2.0\lib\net45\Microsoft.ApplicationInsights.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.CodeDom.Providers.DotNetCompilerPlatform, Version=1.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.1.0.0\lib\net45\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Net.Http.WebRequest" />
+    <Reference Include="System.Web.DynamicData" />
+    <Reference Include="System.Web.Entity" />
+    <Reference Include="System.Web.ApplicationServices" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.Abstractions" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Web.Routing" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.EnterpriseServices" />
+    <Reference Include="Microsoft.Web.Infrastructure, Version=1.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.Web.Infrastructure.1.0.0.0\lib\net40\Microsoft.Web.Infrastructure.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Helpers, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.3.2.3\lib\net45\System.Web.Helpers.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Mvc, Version=5.2.3.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.Mvc.5.2.3\lib\net45\System.Web.Mvc.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Optimization">
+      <HintPath>..\packages\Microsoft.AspNet.Web.Optimization.1.1.3\lib\net40\System.Web.Optimization.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Razor, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.Razor.3.2.3\lib\net45\System.Web.Razor.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.WebPages, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.3.2.3\lib\net45\System.Web.WebPages.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.WebPages.Deployment, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.3.2.3\lib\net45\System.Web.WebPages.Deployment.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.WebPages.Razor, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.3.2.3\lib\net45\System.Web.WebPages.Razor.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="WebGrease">
+      <Private>True</Private>
+      <HintPath>..\packages\WebGrease.1.5.2\lib\WebGrease.dll</HintPath>
+    </Reference>
+    <Reference Include="Antlr3.Runtime">
+      <Private>True</Private>
+      <HintPath>..\packages\Antlr.3.4.1.9004\lib\Antlr3.Runtime.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Reference Include="Newtonsoft.Json">
+      <HintPath>..\packages\Newtonsoft.Json.6.0.4\lib\net45\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer">
+      <HintPath>..\packages\EntityFramework.6.1.3\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.AspNet.Identity.Core">
+      <HintPath>..\packages\Microsoft.AspNet.Identity.Core.2.2.1\lib\net45\Microsoft.AspNet.Identity.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.AspNet.Identity.Owin">
+      <HintPath>..\packages\Microsoft.AspNet.Identity.Owin.2.2.1\lib\net45\Microsoft.AspNet.Identity.Owin.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.AspNet.Identity.EntityFramework">
+      <HintPath>..\packages\Microsoft.AspNet.Identity.EntityFramework.2.2.1\lib\net45\Microsoft.AspNet.Identity.EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="Owin">
+      <HintPath>..\packages\Owin.1.0\lib\net40\Owin.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Owin">
+      <HintPath>..\packages\Microsoft.Owin.3.0.1\lib\net45\Microsoft.Owin.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Owin.Host.SystemWeb">
+      <HintPath>..\packages\Microsoft.Owin.Host.SystemWeb.3.0.1\lib\net45\Microsoft.Owin.Host.SystemWeb.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Owin.Security">
+      <HintPath>..\packages\Microsoft.Owin.Security.3.0.1\lib\net45\Microsoft.Owin.Security.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Owin.Security.Facebook">
+      <HintPath>..\packages\Microsoft.Owin.Security.Facebook.3.0.1\lib\net45\Microsoft.Owin.Security.Facebook.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Owin.Security.Cookies">
+      <HintPath>..\packages\Microsoft.Owin.Security.Cookies.3.0.1\lib\net45\Microsoft.Owin.Security.Cookies.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Owin.Security.OAuth">
+      <HintPath>..\packages\Microsoft.Owin.Security.OAuth.3.0.1\lib\net45\Microsoft.Owin.Security.OAuth.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Owin.Security.Google">
+      <HintPath>..\packages\Microsoft.Owin.Security.Google.3.0.1\lib\net45\Microsoft.Owin.Security.Google.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Owin.Security.Twitter">
+      <HintPath>..\packages\Microsoft.Owin.Security.Twitter.3.0.1\lib\net45\Microsoft.Owin.Security.Twitter.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Owin.Security.MicrosoftAccount">
+      <HintPath>..\packages\Microsoft.Owin.Security.MicrosoftAccount.3.0.1\lib\net45\Microsoft.Owin.Security.MicrosoftAccount.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="App_Start\BundleConfig.cs" />
+    <Compile Include="App_Start\FilterConfig.cs" />
+    <Compile Include="App_Start\IdentityConfig.cs" />
+    <Compile Include="App_Start\RouteConfig.cs" />
+    <Compile Include="App_Start\Startup.Auth.cs" />
+    <Compile Include="Common\GlobalsCommon.cs" />
+    <Compile Include="Controllers\BigDataController.cs" />
+    <Compile Include="Controllers\GlobalsController.cs" />
+    <Compile Include="Controllers\HomeController.cs" />
+    <Compile Include="Global.asax.cs">
+      <DependentUpon>Global.asax</DependentUpon>
+    </Compile>
+    <Compile Include="Models\AccountViewModels.cs" />
+    <Compile Include="Models\IdentityModels.cs" />
+    <Compile Include="Models\ManageViewModels.cs" />
+    <Compile Include="Models\UserAero.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Startup.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Content\bootstrap.css" />
+    <Content Include="Content\bootstrap.min.css" />
+    <Content Include="CssStyle\aero_trend_sty.css" />
+    <Content Include="CssStyle\champion_trend_sty.css" />
+    <Content Include="CssStyle\faq_sty.css" />
+    <Content Include="CssStyle\font-awesome.min.css" />
+    <Content Include="CssStyle\free_hero_sty.css" />
+    <Content Include="CssStyle\hero_info_sty.css" />
+    <Content Include="CssStyle\hero_list_sty.css" />
+    <Content Include="CssStyle\HomeStyle.css" />
+    <Content Include="CssStyle\jquery.mCustomScrollbar.css" />
+    <Content Include="CssStyle\search_sty.css" />
+    <Content Include="CssStyle\toastr.css" />
+    <Content Include="Global.asax" />
+    <Content Include="Content\Site.css" />
+    <Content Include="Icons\K_logo.ico">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Icons\search.png" />
+    <Content Include="Image\aeroicon\1.png" />
+    <Content Include="Image\aeroicon\10.png" />
+    <Content Include="Image\aeroicon\11.png" />
+    <Content Include="Image\aeroicon\12.png" />
+    <Content Include="Image\aeroicon\13.png" />
+    <Content Include="Image\aeroicon\14.png" />
+    <Content Include="Image\aeroicon\15.png" />
+    <Content Include="Image\aeroicon\16.png" />
+    <Content Include="Image\aeroicon\17.png" />
+    <Content Include="Image\aeroicon\18.png" />
+    <Content Include="Image\aeroicon\19.png" />
+    <Content Include="Image\aeroicon\2.png" />
+    <Content Include="Image\aeroicon\20.png" />
+    <Content Include="Image\aeroicon\21.png" />
+    <Content Include="Image\aeroicon\22.png" />
+    <Content Include="Image\aeroicon\23.png" />
+    <Content Include="Image\aeroicon\24.png" />
+    <Content Include="Image\aeroicon\25.png" />
+    <Content Include="Image\aeroicon\26.png" />
+    <Content Include="Image\aeroicon\27.png" />
+    <Content Include="Image\aeroicon\28.png" />
+    <Content Include="Image\aeroicon\3.png" />
+    <Content Include="Image\aeroicon\4.png" />
+    <Content Include="Image\aeroicon\5.png" />
+    <Content Include="Image\aeroicon\6.png" />
+    <Content Include="Image\aeroicon\7.png" />
+    <Content Include="Image\aeroicon\8.png" />
+    <Content Include="Image\aeroicon\9.png" />
+    <Content Include="Image\champion_trend_img\line_mid.png" />
+    <Content Include="Image\champion_trend_img\line_small_title.png" />
+    <Content Include="Image\champion_trend_img\line_small_title_anti.png" />
+    <Content Include="Image\champion_trend_img\no_text_mid_line.png" />
+    <Content Include="Image\champion_trend_img\top_text.png" />
+    <Content Include="Image\champion_trend_img\win.png" />
+    <Content Include="Image\heroicon\aatrox_square_0.png" />
+    <Content Include="Image\heroicon\ahri_square_0.png" />
+    <Content Include="Image\heroicon\akali_square_0.png" />
+    <Content Include="Image\heroicon\alistar_square_0.png" />
+    <Content Include="Image\heroicon\amumu_square_0.png" />
+    <Content Include="Image\heroicon\anivia_square_0.png" />
+    <Content Include="Image\heroicon\annie_Square_0.png" />
+    <Content Include="Image\heroicon\ashe_square_0.png" />
+    <Content Include="Image\heroicon\AurelionSol_Square_0.png" />
+    <Content Include="Image\heroicon\azir_square_0.png" />
+    <Content Include="Image\heroicon\Bard_Square_0.png" />
+    <Content Include="Image\heroicon\blitzcrank_square_0.png" />
+    <Content Include="Image\heroicon\brand_square_0.png" />
+    <Content Include="Image\heroicon\braum_square_0.png" />
+    <Content Include="Image\heroicon\caitlyn_square_0.png" />
+    <Content Include="Image\heroicon\Camille_square_0.png" />
+    <Content Include="Image\heroicon\cassiopeia_square_0.png" />
+    <Content Include="Image\heroicon\chogath_square_0.png" />
+    <Content Include="Image\heroicon\corki_square_0.png" />
+    <Content Include="Image\heroicon\darius_square_0.png" />
+    <Content Include="Image\heroicon\diana_square_0.png" />
+    <Content Include="Image\heroicon\draven_square_0.png" />
+    <Content Include="Image\heroicon\drmundo_square_0.png" />
+    <Content Include="Image\heroicon\Ekko_Square_0.png" />
+    <Content Include="Image\heroicon\elise_square_0.png" />
+    <Content Include="Image\heroicon\evelynn_square_0.png" />
+    <Content Include="Image\heroicon\ezreal_square_0.png" />
+    <Content Include="Image\heroicon\fiddlesticks_square_0.png" />
+    <Content Include="Image\heroicon\fiora_square_0.png" />
+    <Content Include="Image\heroicon\fizz_square_0.png" />
+    <Content Include="Image\heroicon\galio_square_0.png" />
+    <Content Include="Image\heroicon\gangplank_square_0.png" />
+    <Content Include="Image\heroicon\garen_square_0.png" />
+    <Content Include="Image\heroicon\gnar_square_0.png" />
+    <Content Include="Image\heroicon\gragas_square_0.png" />
+    <Content Include="Image\heroicon\graves_square_0.png" />
+    <Content Include="Image\heroicon\hecarim_square_0.png" />
+    <Content Include="Image\heroicon\heimerdinger_square_0.png" />
+    <Content Include="Image\heroicon\Illaoi_Square_0.png" />
+    <Content Include="Image\heroicon\irelia_square_0.png" />
+    <Content Include="Image\heroicon\Ivern_Square_0.png" />
+    <Content Include="Image\heroicon\janna_square_0.png" />
+    <Content Include="Image\heroicon\jarvaniv_square_0.png" />
+    <Content Include="Image\heroicon\jax_square_0.png" />
+    <Content Include="Image\heroicon\jayce_square_0.png" />
+    <Content Include="Image\heroicon\Jhin_Square_0.png" />
+    <Content Include="Image\heroicon\jinx_square_0.png" />
+    <Content Include="Image\heroicon\Kalista_Square_0.png" />
+    <Content Include="Image\heroicon\karma_square_0.png" />
+    <Content Include="Image\heroicon\karthus_square_0.png" />
+    <Content Include="Image\heroicon\kassadin_square_0.png" />
+    <Content Include="Image\heroicon\katarina_square_0.png" />
+    <Content Include="Image\heroicon\kayle_square_0.png" />
+    <Content Include="Image\heroicon\Kayn_Square_0.png" />
+    <Content Include="Image\heroicon\kennen_square_0.png" />
+    <Content Include="Image\heroicon\khazix_square_0.png" />
+    <Content Include="Image\heroicon\Kindred_Square_0.png" />
+    <Content Include="Image\heroicon\Kled_Square_0.png" />
+    <Content Include="Image\heroicon\kogmaw_square_0.png" />
+    <Content Include="Image\heroicon\leblanc_square_0.png" />
+    <Content Include="Image\heroicon\leesin_square_0.png" />
+    <Content Include="Image\heroicon\leona_square_0.png" />
+    <Content Include="Image\heroicon\lissandra_square_0.png" />
+    <Content Include="Image\heroicon\lucian_square_0.png" />
+    <Content Include="Image\heroicon\lulu_square_0.png" />
+    <Content Include="Image\heroicon\lux_square_0.png" />
+    <Content Include="Image\heroicon\malphite_square_0.png" />
+    <Content Include="Image\heroicon\malzahar_square_0.png" />
+    <Content Include="Image\heroicon\maokai_square_0.png" />
+    <Content Include="Image\heroicon\masteryi_square_0.png" />
+    <Content Include="Image\heroicon\missfortune_square_0.png" />
+    <Content Include="Image\heroicon\monkeyking_square_0.png" />
+    <Content Include="Image\heroicon\mordekaiser_square_0.png" />
+    <Content Include="Image\heroicon\morgana_square_0.png" />
+    <Content Include="Image\heroicon\nami_square_0.png" />
+    <Content Include="Image\heroicon\nasus_square_0.png" />
+    <Content Include="Image\heroicon\nautilus_square_0.png" />
+    <Content Include="Image\heroicon\nidalee_square_0.png" />
+    <Content Include="Image\heroicon\nocturne_square_0.png" />
+    <Content Include="Image\heroicon\nunu_square_0.png" />
+    <Content Include="Image\heroicon\olaf_square_0.png" />
+    <Content Include="Image\heroicon\orianna_square_0.png" />
+    <Content Include="Image\heroicon\Ornn_square_0.png" />
+    <Content Include="Image\heroicon\pantheon_square_0.png" />
+    <Content Include="Image\heroicon\poppy_square_0.png" />
+    <Content Include="Image\heroicon\quinn_square_0.png" />
+    <Content Include="Image\heroicon\Rakan_Square_0.png" />
+    <Content Include="Image\heroicon\rammus_square_0.png" />
+    <Content Include="Image\heroicon\RekSai_Square_0.png" />
+    <Content Include="Image\heroicon\renekton_square_0.png" />
+    <Content Include="Image\heroicon\rengar_square_0.png" />
+    <Content Include="Image\heroicon\riven_square_0.png" />
+    <Content Include="Image\heroicon\rumble_square_0.png" />
+    <Content Include="Image\heroicon\ryze_square_0.png" />
+    <Content Include="Image\heroicon\sejuani_square_0.png" />
+    <Content Include="Image\heroicon\shaco_square_0.png" />
+    <Content Include="Image\heroicon\shen_square_0.png" />
+    <Content Include="Image\heroicon\shyvana_square_0.png" />
+    <Content Include="Image\heroicon\singed_square_0.png" />
+    <Content Include="Image\heroicon\sion_square_0.png" />
+    <Content Include="Image\heroicon\sivir_square_0.png" />
+    <Content Include="Image\heroicon\skarner_square_0.png" />
+    <Content Include="Image\heroicon\sona_square_0.png" />
+    <Content Include="Image\heroicon\soraka_square_0.png" />
+    <Content Include="Image\heroicon\swain_square_0.png" />
+    <Content Include="Image\heroicon\syndra_square_0.png" />
+    <Content Include="Image\heroicon\TahmKench_Square_0.png" />
+    <Content Include="Image\heroicon\Taliyah_Square_0.png" />
+    <Content Include="Image\heroicon\talon_square_0.png" />
+    <Content Include="Image\heroicon\taric_square_0.png" />
+    <Content Include="Image\heroicon\teemo_square_0.png" />
+    <Content Include="Image\heroicon\thresh_square_0.png" />
+    <Content Include="Image\heroicon\tristana_square_0.png" />
+    <Content Include="Image\heroicon\trundle_square_0.png" />
+    <Content Include="Image\heroicon\tryndamere_square_0.png" />
+    <Content Include="Image\heroicon\twistedfate_square_0.png" />
+    <Content Include="Image\heroicon\twitch_square_0.png" />
+    <Content Include="Image\heroicon\udyr_square_0.png" />
+    <Content Include="Image\heroicon\urgot_square_0.png" />
+    <Content Include="Image\heroicon\varus_square_0.png" />
+    <Content Include="Image\heroicon\vayne_square_0.png" />
+    <Content Include="Image\heroicon\veigar_square_0.png" />
+    <Content Include="Image\heroicon\velkoz_square_0.png" />
+    <Content Include="Image\heroicon\viktor_square_0.png" />
+    <Content Include="Image\heroicon\vi_square_0.png" />
+    <Content Include="Image\heroicon\vladimir_square_0.png" />
+    <Content Include="Image\heroicon\volibear_square_0.png" />
+    <Content Include="Image\heroicon\warwick_square_0.png" />
+    <Content Include="Image\heroicon\Xayah_Square_0.png" />
+    <Content Include="Image\heroicon\xerath_square_0.png" />
+    <Content Include="Image\heroicon\xinzhao_square_0.png" />
+    <Content Include="Image\heroicon\yasuo_square_0.png" />
+    <Content Include="Image\heroicon\yorick_square_0.png" />
+    <Content Include="Image\heroicon\zac_square_0.png" />
+    <Content Include="Image\heroicon\zed_square_0.png" />
+    <Content Include="Image\heroicon\ziggs_square_0.png" />
+    <Content Include="Image\heroicon\zilean_square_0.png" />
+    <Content Include="Image\heroicon\zyra_square_0.png" />
+    <Content Include="Image\hero_gs_bg\Aatrox.jpg" />
+    <Content Include="Image\hero_gs_bg\Ahri.jpg" />
+    <Content Include="Image\hero_gs_bg\Akali.jpg" />
+    <Content Include="Image\hero_gs_bg\Alistar.jpg" />
+    <Content Include="Image\hero_gs_bg\Amumu.jpg" />
+    <Content Include="Image\hero_gs_bg\Anivia.jpg" />
+    <Content Include="Image\hero_gs_bg\Annie.jpg" />
+    <Content Include="Image\hero_gs_bg\Ashe.jpg" />
+    <Content Include="Image\hero_gs_bg\AurelionSol.jpg" />
+    <Content Include="Image\hero_gs_bg\Azir.jpg" />
+    <Content Include="Image\hero_gs_bg\Bard.jpg" />
+    <Content Include="Image\hero_gs_bg\Blitzcrank.jpg" />
+    <Content Include="Image\hero_gs_bg\Brand.jpg" />
+    <Content Include="Image\hero_gs_bg\Braum.jpg" />
+    <Content Include="Image\hero_gs_bg\Caitlyn.jpg" />
+    <Content Include="Image\hero_gs_bg\Camille.jpg" />
+    <Content Include="Image\hero_gs_bg\Cassiopeia.jpg" />
+    <Content Include="Image\hero_gs_bg\Chogath.jpg" />
+    <Content Include="Image\hero_gs_bg\Corki.jpg" />
+    <Content Include="Image\hero_gs_bg\Darius.jpg" />
+    <Content Include="Image\hero_gs_bg\Diana.jpg" />
+    <Content Include="Image\hero_gs_bg\Draven.jpg" />
+    <Content Include="Image\hero_gs_bg\DrMundo.jpg" />
+    <Content Include="Image\hero_gs_bg\Ekko.jpg" />
+    <Content Include="Image\hero_gs_bg\Elise.jpg" />
+    <Content Include="Image\hero_gs_bg\Evelynn.jpg" />
+    <Content Include="Image\hero_gs_bg\Ezreal.jpg" />
+    <Content Include="Image\hero_gs_bg\FiddleSticks.jpg" />
+    <Content Include="Image\hero_gs_bg\Fiora.jpg" />
+    <Content Include="Image\hero_gs_bg\Fizz.jpg" />
+    <Content Include="Image\hero_gs_bg\Galio.jpg" />
+    <Content Include="Image\hero_gs_bg\Gangplank.jpg" />
+    <Content Include="Image\hero_gs_bg\Garen.jpg" />
+    <Content Include="Image\hero_gs_bg\Gnar.jpg" />
+    <Content Include="Image\hero_gs_bg\Gragas.jpg" />
+    <Content Include="Image\hero_gs_bg\Graves.jpg" />
+    <Content Include="Image\hero_gs_bg\Hecarim.jpg" />
+    <Content Include="Image\hero_gs_bg\Heimerdinger.jpg" />
+    <Content Include="Image\hero_gs_bg\Illaoi.jpg" />
+    <Content Include="Image\hero_gs_bg\Irelia.jpg" />
+    <Content Include="Image\hero_gs_bg\Ivern.jpg" />
+    <Content Include="Image\hero_gs_bg\Janna.jpg" />
+    <Content Include="Image\hero_gs_bg\JarvanIV.jpg" />
+    <Content Include="Image\hero_gs_bg\Jax.jpg" />
+    <Content Include="Image\hero_gs_bg\Jayce.jpg" />
+    <Content Include="Image\hero_gs_bg\Jhin.jpg" />
+    <Content Include="Image\hero_gs_bg\Jinx.jpg" />
+    <Content Include="Image\hero_gs_bg\Kalista.jpg" />
+    <Content Include="Image\hero_gs_bg\Karma.jpg" />
+    <Content Include="Image\hero_gs_bg\Karthus.jpg" />
+    <Content Include="Image\hero_gs_bg\Kassadin.jpg" />
+    <Content Include="Image\hero_gs_bg\Katarina.jpg" />
+    <Content Include="Image\hero_gs_bg\Kayle.jpg" />
+    <Content Include="Image\hero_gs_bg\Kayn.jpg" />
+    <Content Include="Image\hero_gs_bg\Kennen.jpg" />
+    <Content Include="Image\hero_gs_bg\Khazix.jpg" />
+    <Content Include="Image\hero_gs_bg\Kindred.jpg" />
+    <Content Include="Image\hero_gs_bg\Kled.jpg" />
+    <Content Include="Image\hero_gs_bg\KogMaw.jpg" />
+    <Content Include="Image\hero_gs_bg\Leblanc.jpg" />
+    <Content Include="Image\hero_gs_bg\LeeSin.jpg" />
+    <Content Include="Image\hero_gs_bg\Leona.jpg" />
+    <Content Include="Image\hero_gs_bg\Lissandra.jpg" />
+    <Content Include="Image\hero_gs_bg\Lucian.jpg" />
+    <Content Include="Image\hero_gs_bg\Lulu.jpg" />
+    <Content Include="Image\hero_gs_bg\Lux.jpg" />
+    <Content Include="Image\hero_gs_bg\Malphite.jpg" />
+    <Content Include="Image\hero_gs_bg\Malzahar.jpg" />
+    <Content Include="Image\hero_gs_bg\Maokai.jpg" />
+    <Content Include="Image\hero_gs_bg\MasterYi.jpg" />
+    <Content Include="Image\hero_gs_bg\MissFortune.jpg" />
+    <Content Include="Image\hero_gs_bg\MonkeyKing.jpg" />
+    <Content Include="Image\hero_gs_bg\Mordekaiser.jpg" />
+    <Content Include="Image\hero_gs_bg\Morgana.jpg" />
+    <Content Include="Image\hero_gs_bg\Nami.jpg" />
+    <Content Include="Image\hero_gs_bg\Nasus.jpg" />
+    <Content Include="Image\hero_gs_bg\Nautilus.jpg" />
+    <Content Include="Image\hero_gs_bg\Nidalee.jpg" />
+    <Content Include="Image\hero_gs_bg\Nocturne.jpg" />
+    <Content Include="Image\hero_gs_bg\Nunu.jpg" />
+    <Content Include="Image\hero_gs_bg\Olaf.jpg" />
+    <Content Include="Image\hero_gs_bg\Orianna.jpg" />
+    <Content Include="Image\hero_gs_bg\Ornn.jpg" />
+    <Content Include="Image\hero_gs_bg\Pantheon.jpg" />
+    <Content Include="Image\hero_gs_bg\Poppy.jpg" />
+    <Content Include="Image\hero_gs_bg\Quinn.jpg" />
+    <Content Include="Image\hero_gs_bg\Rakan.jpg" />
+    <Content Include="Image\hero_gs_bg\Rammus.jpg" />
+    <Content Include="Image\hero_gs_bg\RekSai.jpg" />
+    <Content Include="Image\hero_gs_bg\Renekton.jpg" />
+    <Content Include="Image\hero_gs_bg\Rengar.jpg" />
+    <Content Include="Image\hero_gs_bg\Riven.jpg" />
+    <Content Include="Image\hero_gs_bg\Rumble.jpg" />
+    <Content Include="Image\hero_gs_bg\Ryze.jpg" />
+    <Content Include="Image\hero_gs_bg\Sejuani.jpg" />
+    <Content Include="Image\hero_gs_bg\Shaco.jpg" />
+    <Content Include="Image\hero_gs_bg\Shen.jpg" />
+    <Content Include="Image\hero_gs_bg\Shyvana.jpg" />
+    <Content Include="Image\hero_gs_bg\Singed.jpg" />
+    <Content Include="Image\hero_gs_bg\Sion.jpg" />
+    <Content Include="Image\hero_gs_bg\Sivir.jpg" />
+    <Content Include="Image\hero_gs_bg\Skarner.jpg" />
+    <Content Include="Image\hero_gs_bg\Sona.jpg" />
+    <Content Include="Image\hero_gs_bg\Soraka.jpg" />
+    <Content Include="Image\hero_gs_bg\Swain.jpg" />
+    <Content Include="Image\hero_gs_bg\Syndra.jpg" />
+    <Content Include="Image\hero_gs_bg\TahmKench.jpg" />
+    <Content Include="Image\hero_gs_bg\Taliyah.jpg" />
+    <Content Include="Image\hero_gs_bg\Talon.jpg" />
+    <Content Include="Image\hero_gs_bg\Taric.jpg" />
+    <Content Include="Image\hero_gs_bg\Teemo.jpg" />
+    <Content Include="Image\hero_gs_bg\Thresh.jpg" />
+    <Content Include="Image\hero_gs_bg\Tristana.jpg" />
+    <Content Include="Image\hero_gs_bg\Trundle.jpg" />
+    <Content Include="Image\hero_gs_bg\Tryndamere.jpg" />
+    <Content Include="Image\hero_gs_bg\TwistedFate.jpg" />
+    <Content Include="Image\hero_gs_bg\Twitch.jpg" />
+    <Content Include="Image\hero_gs_bg\Udyr.jpg" />
+    <Content Include="Image\hero_gs_bg\Urgot.jpg" />
+    <Content Include="Image\hero_gs_bg\Varus.jpg" />
+    <Content Include="Image\hero_gs_bg\Vayne.jpg" />
+    <Content Include="Image\hero_gs_bg\Veigar.jpg" />
+    <Content Include="Image\hero_gs_bg\Velkoz.jpg" />
+    <Content Include="Image\hero_gs_bg\Vi.jpg" />
+    <Content Include="Image\hero_gs_bg\Viktor.jpg" />
+    <Content Include="Image\hero_gs_bg\Vladimir.jpg" />
+    <Content Include="Image\hero_gs_bg\Volibear.jpg" />
+    <Content Include="Image\hero_gs_bg\Warwick.jpg" />
+    <Content Include="Image\hero_gs_bg\Xayah.jpg" />
+    <Content Include="Image\hero_gs_bg\Xerath.jpg" />
+    <Content Include="Image\hero_gs_bg\XinZhao.jpg" />
+    <Content Include="Image\hero_gs_bg\Yasuo.jpg" />
+    <Content Include="Image\hero_gs_bg\Yorick.jpg" />
+    <Content Include="Image\hero_gs_bg\Zac.jpg" />
+    <Content Include="Image\hero_gs_bg\Zed.jpg" />
+    <Content Include="Image\hero_gs_bg\Ziggs.jpg" />
+    <Content Include="Image\hero_gs_bg\Zilean.jpg" />
+    <Content Include="Image\hero_gs_bg\Zyra.jpg" />
+    <Content Include="Image\hero_tag\cike.png" />
+    <Content Include="Image\hero_tag\fashi.png" />
+    <Content Include="Image\hero_tag\fuzhu.png" />
+    <Content Include="Image\hero_tag\sheshou.png" />
+    <Content Include="Image\hero_tag\suoyou.png" />
+    <Content Include="Image\hero_tag\tanke.png" />
+    <Content Include="Image\hero_tag\zhanshi.png" />
+    <Content Include="Image\indicator.png" />
+    <Content Include="Image\Kayi.jpg" />
+    <Content Include="Image\Kayi_gaosi.jpg" />
+    <Content Include="Image\killteemo_text_logo.png" />
+    <Content Include="Image\k_line.png" />
+    <Content Include="Image\mid_kill_logo.png" />
+    <Content Include="Image\pay\zhifu.png" />
+    <Content Include="Image\tag\1.png" />
+    <Content Include="Image\tag\10.png" />
+    <Content Include="Image\tag\11.png" />
+    <Content Include="Image\tag\12.png" />
+    <Content Include="Image\tag\2.png" />
+    <Content Include="Image\tag\3.png" />
+    <Content Include="Image\tag\4.png" />
+    <Content Include="Image\tag\5.png" />
+    <Content Include="Image\tag\6.png" />
+    <Content Include="Image\tag\7.png" />
+    <Content Include="Image\tag\8.png" />
+    <Content Include="Image\tag\9.png" />
+    <Content Include="Image\TopBG.png" />
+    <Content Include="Image\TopBG_small.png" />
+    <Content Include="Image\t_grid.png" />
+    <Content Include="KillTeemoJS\AeroTrend_JS.js" />
+    <Content Include="KillTeemoJS\ChampionTrend_JS.js" />
+    <Content Include="KillTeemoJS\FreeHero_JS.js" />
+    <Content Include="KillTeemoJS\Globals.js" />
+    <Content Include="KillTeemoJS\HeroInfo_JS.js" />
+    <Content Include="KillTeemoJS\HeroListJS.js" />
+    <Content Include="KillTeemoJS\HomeJS.js" />
+    <Content Include="KillTeemoJS\jquery.mCustomScrollbar.concat.min.js" />
+    <Content Include="KillTeemoJS\Search_JS.js" />
+    <Content Include="KillTeemoJS\ServicesInfoJS.js" />
+    <Content Include="KillTeemoJS\snow.js" />
+    <Content Include="KillTeemoJS\spin.min.js" />
+    <Content Include="KillTeemoJS\toastr.js" />
+    <Content Include="Scripts\bootstrap.js" />
+    <Content Include="Scripts\bootstrap.min.js" />
+    <Content Include="ApplicationInsights.config">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="KillTeemoFonts\fontawesome-webfont.woff" />
+    <None Include="Properties\PublishProfiles\KillTeemo.pubxml" />
+    <None Include="Scripts\jquery-1.10.2.intellisense.js" />
+    <None Include="Scripts\jquery.validate-vsdoc.js" />
+    <Content Include="Scripts\jquery-1.11.3.js" />
+    <Content Include="Scripts\jquery-1.11.3.min.js" />
+    <Content Include="Scripts\jquery.validate.js" />
+    <Content Include="Scripts\jquery.validate.min.js" />
+    <Content Include="Scripts\jquery.validate.unobtrusive.js" />
+    <Content Include="Scripts\jquery.validate.unobtrusive.min.js" />
+    <Content Include="Scripts\modernizr-2.6.2.js" />
+    <Content Include="Scripts\respond.js" />
+    <Content Include="Scripts\respond.min.js" />
+    <Content Include="Scripts\_references.js" />
+    <Content Include="Web.config">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="Web.Debug.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </Content>
+    <Content Include="Web.Release.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </Content>
+    <Content Include="Views\Web.config">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="Views\Home\Index.cshtml" />
+    <Content Include="Views\Home\ServicesInfo.cshtml" />
+    <Content Include="Views\BigData\ChampionTrend.cshtml" />
+    <Content Include="Views\BigData\AeroTrend.cshtml" />
+    <Content Include="Views\BigData\HeroList.cshtml" />
+    <Content Include="Views\BigData\HeroInfo.cshtml" />
+    <Content Include="Views\BigData\FreeHero.cshtml" />
+    <Content Include="Views\Home\Search.cshtml" />
+    <Content Include="Views\Home\Faq.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="App_Data\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="packages.config" />
+    <Content Include="Scripts\jquery-1.10.2.min.map" />
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Service References\" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Common.MySql\Common.MySql.csproj">
+      <Project>{9d30546c-67f6-447e-846b-186613010b26}</Project>
+      <Name>Common.MySql</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Common.RabbitMQ\Common.RabbitMQ.csproj">
+      <Project>{fc285392-d21f-4ad1-baa6-f317be93f8cd}</Project>
+      <Name>Common.RabbitMQ</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Common.Redis\Common.Redis.csproj">
+      <Project>{4fe0c9f6-7907-4c16-83df-5a194b286da0}</Project>
+      <Name>Common.Redis</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\DaiWanAPI\DaiWanAPI.csproj">
+      <Project>{ee1afbe8-9700-459c-9d9e-afa35c7d95da}</Project>
+      <Name>DaiWanAPI</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\LolDataDb\LolDataDb.csproj">
+      <Project>{3b5ed1ad-f64f-40ae-9bd0-de2ec80438a9}</Project>
+      <Name>LolDataDb</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
+    <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+  </PropertyGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(VSToolsPath)\WebApplications\Microsoft.WebApplication.targets" Condition="'$(VSToolsPath)' != ''" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" Condition="false" />
+  <Target Name="MvcBuildViews" AfterTargets="AfterBuild" Condition="'$(MvcBuildViews)'=='true'">
+    <AspNetCompiler VirtualPath="temp" PhysicalPath="$(WebProjectOutputDir)" />
+  </Target>
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>True</UseIIS>
+          <AutoAssignPort>True</AutoAssignPort>
+          <DevelopmentServerPort>58204</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>http://localhost:58204/</IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>False</UseCustomServer>
+          <CustomServerUrl>
+          </CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+  <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
+    <PropertyGroup>
+      <ErrorText>这台计算机上缺少此项目引用的 NuGet 程序包。使用“NuGet 程序包还原”可下载这些程序包。有关更多信息，请参见 http://go.microsoft.com/fwlink/?LinkID=322105。缺少的文件是 {0}。</ErrorText>
+    </PropertyGroup>
+    <Error Condition="!Exists('..\packages\Microsoft.Net.Compilers.1.0.0\build\Microsoft.Net.Compilers.props')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\Microsoft.Net.Compilers.1.0.0\build\Microsoft.Net.Compilers.props'))" />
+    <Error Condition="!Exists('..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.1.0.0\build\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.1.0.0\build\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props'))" />
+  </Target>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it.
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target> -->
+</Project>
