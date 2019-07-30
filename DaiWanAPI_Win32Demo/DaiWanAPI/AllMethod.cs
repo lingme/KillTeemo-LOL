@@ -21,7 +21,7 @@ namespace DaiWanAPI
         /// <returns></returns>
         public static JObject GetAllAero(string Token)
         {
-            return CallDaiWanAPI.CallRemoteAPI(Token, @"http://lol.apigod.com:8080/api/AllGameArea");
+            return CallDaiWanAPI.CallRemoteAPI(Token, @"*******AllGameArea");
         }
 
         /// <summary>
@@ -31,7 +31,7 @@ namespace DaiWanAPI
         /// <returns></returns>
         public static JObject GetAllChampion(string Token)
         {
-            return CallDaiWanAPI.CallRemoteAPI(Token, @"http://lol.apigod.com:8080/api/AllHero");
+            return CallDaiWanAPI.CallRemoteAPI(Token, @"*******AllHero");
         }
 
         /// <summary>
@@ -41,7 +41,7 @@ namespace DaiWanAPI
         /// <returns></returns>
         public static JObject GetFreeChampion(string Token)
         {
-            return CallDaiWanAPI.CallRemoteAPI(Token, @"http://lol.apigod.com:8080/api/Free");
+            return CallDaiWanAPI.CallRemoteAPI(Token, @"*******Free");
         }
 
         //=========================================================================================================
@@ -56,7 +56,7 @@ namespace DaiWanAPI
         /// <returns></returns>
         public static JObject GetUserAeroByCname(string Token, string UserName)
         {
-            return CallDaiWanAPI.CallRemoteAPI(Token, string.Format(@"http://lol.apigod.com:8080/api/UserArea?userName={0}", UserName));
+            return CallDaiWanAPI.CallRemoteAPI(Token, string.Format(@"*******UserArea?userName={0}", UserName));
         }
 
         /// <summary>
@@ -68,7 +68,7 @@ namespace DaiWanAPI
         /// <returns></returns>
         public static JObject GetUserInfoByQquin(string Token,string Qquin,string AeroId)
         {
-            return CallDaiWanAPI.CallRemoteAPI(Token, string.Format(@"http://lol.apigod.com:8080/api/UserExtInfo?qquin={0}&areaid={1}", Qquin, AeroId));
+            return CallDaiWanAPI.CallRemoteAPI(Token, string.Format(@"*******UserExtInfo?qquin={0}&areaid={1}", Qquin, AeroId));
         }
 
         /// <summary>
@@ -81,7 +81,7 @@ namespace DaiWanAPI
         /// <returns></returns>
         public static JObject GetBattleList(string Token,string Qquin,string AeroId,string PageNum)
         {
-            return CallDaiWanAPI.CallRemoteAPI(Token, string.Format(@"http://lol.apigod.com:8080/api/BattleList?qquin={0}&areaid={1}&page={2}", Qquin, AeroId, PageNum));
+            return CallDaiWanAPI.CallRemoteAPI(Token, string.Format(@"*******BattleList?qquin={0}&areaid={1}&page={2}", Qquin, AeroId, PageNum));
         }
 
         /// <summary>
@@ -93,7 +93,7 @@ namespace DaiWanAPI
         /// <returns></returns>
         public static JObject GetGameDetail(string Token,string AeroId,string GameId)
         {
-            return CallDaiWanAPI.CallRemoteAPI(Token, string.Format(@"http://lol.apigod.com:8080/api/GameDetail?areaid={0}&gameid={1}", AeroId, GameId));
+            return CallDaiWanAPI.CallRemoteAPI(Token, string.Format(@"*******GameDetail?areaid={0}&gameid={1}", AeroId, GameId));
         }
 
         /// <summary>
@@ -105,7 +105,7 @@ namespace DaiWanAPI
         /// <returns></returns>
         public static JObject GetUserHonor(string Token,string AeroId,string Qquin)
         {
-            return CallDaiWanAPI.CallRemoteAPI(Token, string.Format(@"http://lol.apigod.com:8080/api/UserHonor?areaid={0}&qquin={1}", AeroId, Qquin));
+            return CallDaiWanAPI.CallRemoteAPI(Token, string.Format(@"*******UserHonor?areaid={0}&qquin={1}", AeroId, Qquin));
         }
 
         /// <summary>
@@ -117,7 +117,7 @@ namespace DaiWanAPI
         /// <returns></returns>
         public static JObject GetUserKDA30(string Token,string AeroId,string Qquin)
         {
-            return CallDaiWanAPI.CallRemoteAPI(Token, string.Format(@"http://lol.apigod.com:8080/api/UserKDA?areaid={0}&qquin={1}", AeroId, Qquin));
+            return CallDaiWanAPI.CallRemoteAPI(Token, string.Format(@"*******UserKDA?areaid={0}&qquin={1}", AeroId, Qquin));
         }
 
         /// <summary>
@@ -129,7 +129,7 @@ namespace DaiWanAPI
         /// <returns></returns>
         public static JObject GetUserAllBattle(string Token,string AeroId,string Qquin)
         {
-            return CallDaiWanAPI.CallRemoteAPI(Token, string.Format(@"http://lol.apigod.com:8080/api/UserAllBattle?areaid={0}&qquin={1}", AeroId, Qquin));
+            return CallDaiWanAPI.CallRemoteAPI(Token, string.Format(@"*******UserAllBattle?areaid={0}&qquin={1}", AeroId, Qquin));
         }
 
         /// <summary>
@@ -141,7 +141,7 @@ namespace DaiWanAPI
         /// <returns></returns>
         public static JObject GetUserMvp(string Token,string AeroId ,string Qquin)
         {
-            return CallDaiWanAPI.CallRemoteAPI(Token, string.Format(@"http://lol.apigod.com:8080/api/UserMVP?areaid={0}&qquin={1}", AeroId, Qquin));
+            return CallDaiWanAPI.CallRemoteAPI(Token, string.Format(@"*******UserMVP?areaid={0}&qquin={1}", AeroId, Qquin));
         }
 
         /// <summary>
@@ -152,7 +152,7 @@ namespace DaiWanAPI
         /// <returns></returns>
         public static JObject GetChampion(string Token,string ChampionId)
         {
-            return CallDaiWanAPI.CallRemoteAPI(Token, string.Format(@"http://lol.apigod.com:8080/api/ChampionIconStr?id={0}", ChampionId));
+            return CallDaiWanAPI.CallRemoteAPI(Token, string.Format(@"*******ChampionIconStr?id={0}", ChampionId));
         }
 
         /// <summary>
@@ -163,7 +163,7 @@ namespace DaiWanAPI
         /// <returns></returns>
         public static JObject GetUserIcon(string Token ,string IconId)
         {
-            return CallDaiWanAPI.CallRemoteAPI(Token, string.Format(@"http://lol.apigod.com:8080/api/UserIconStr?id={0}", IconId));
+            return CallDaiWanAPI.CallRemoteAPI(Token, string.Format(@"*******UserIconStr?id={0}", IconId));
         }
 
         /// <summary>
@@ -174,7 +174,7 @@ namespace DaiWanAPI
         /// <returns></returns>
         public static JObject GetSkillIcon(string Token,string IconId)
         {
-            return CallDaiWanAPI.CallRemoteAPI(Token, string.Format(@"http://lol.apigod.com:8080/api/SkillIconStr?id={0}", IconId));
+            return CallDaiWanAPI.CallRemoteAPI(Token, string.Format(@"*******SkillIconStr?id={0}", IconId));
         }
 
         /// <summary>
@@ -185,7 +185,7 @@ namespace DaiWanAPI
         /// <returns></returns>
         public static JObject GetGameType(string Token,string TypeId)
         {
-            return CallDaiWanAPI.CallRemoteAPI(Token, string.Format(@"http://lol.apigod.com:8080/api/GameType?typeid={0}", TypeId));
+            return CallDaiWanAPI.CallRemoteAPI(Token, string.Format(@"*******GameType?typeid={0}", TypeId));
         }
 
         /// <summary>
@@ -196,7 +196,7 @@ namespace DaiWanAPI
         /// <returns></returns>
         public static JObject GetAeroGame(string Token,string TypeId)
         {
-            return CallDaiWanAPI.CallRemoteAPI(Token, string.Format(@"http://lol.apigod.com:8080/api/GameArea?areaid={0}", TypeId));
+            return CallDaiWanAPI.CallRemoteAPI(Token, string.Format(@"*******GameArea?areaid={0}", TypeId));
         }
 
         /// <summary>
@@ -208,7 +208,7 @@ namespace DaiWanAPI
         /// <returns></returns>
         public static JObject GetTierQueue(string Token,string Tier,string Queue)
         {
-            return CallDaiWanAPI.CallRemoteAPI(Token, string.Format(@"http://lol.apigod.com:8080/api/TierQueue?tier={0}&queue={1}", Tier, Queue));
+            return CallDaiWanAPI.CallRemoteAPI(Token, string.Format(@"*******TierQueue?tier={0}&queue={1}", Tier, Queue));
         }
 
         /// <summary>
@@ -219,7 +219,7 @@ namespace DaiWanAPI
         /// <returns></returns>
         public static JObject GetTagName(string Token, string TagId)
         {
-            return CallDaiWanAPI.CallRemoteAPI(Token, string.Format(@"http://lol.apigod.com:8080/api/TagName?tagid={0}", TagId));
+            return CallDaiWanAPI.CallRemoteAPI(Token, string.Format(@"*******TagName?tagid={0}", TagId));
         }
 
         /// <summary>
@@ -230,7 +230,7 @@ namespace DaiWanAPI
         /// <returns></returns>
         public static JObject GetSkinImg(string Token,string SkinId)
         {
-            return CallDaiWanAPI.CallRemoteAPI(Token, string.Format(@"http://lol.apigod.com:8080/api/SkinIconStr?id={0}", SkinId));
+            return CallDaiWanAPI.CallRemoteAPI(Token, string.Format(@"*******SkinIconStr?id={0}", SkinId));
         }
 
         /// <summary>
@@ -241,7 +241,7 @@ namespace DaiWanAPI
         /// <returns></returns>
         public static JObject GetItemIcon(string Token,string ItemId)
         {
-            return CallDaiWanAPI.CallRemoteAPI(Token, string.Format(@"http://lol.apigod.com:8080/api/ItemIconStr?id={0}", ItemId));
+            return CallDaiWanAPI.CallRemoteAPI(Token, string.Format(@"*******ItemIconStr?id={0}", ItemId));
         }
     }
 }
